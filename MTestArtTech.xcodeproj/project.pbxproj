@@ -14,6 +14,10 @@
 		94326DFC2A9F5F93005E4530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94326DFB2A9F5F93005E4530 /* Assets.xcassets */; };
 		94326DFF2A9F5F93005E4530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94326DFD2A9F5F93005E4530 /* LaunchScreen.storyboard */; };
 		94326E0A2A9F6DB7005E4530 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E092A9F6DB7005E4530 /* RegistrationViewModel.swift */; };
+		94326E0D2A9F7DB1005E4530 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E0C2A9F7DB1005E4530 /* String+Extension.swift */; };
+		94326E0F2A9FB058005E4530 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E0E2A9FB058005E4530 /* SignInViewController.swift */; };
+		94326E122A9FB399005E4530 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E112A9FB399005E4530 /* SignInViewModel.swift */; };
+		94326E142A9FB561005E4530 /* AlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E132A9FB561005E4530 /* AlertController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		94326DFE2A9F5F93005E4530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94326E002A9F5F93005E4530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94326E092A9F6DB7005E4530 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		94326E0C2A9F7DB1005E4530 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		94326E0E2A9FB058005E4530 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		94326E112A9FB399005E4530 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		94326E132A9FB561005E4530 /* AlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,8 @@
 		94326DF12A9F5F92005E4530 /* MTestArtTech */ = {
 			isa = PBXGroup;
 			children = (
-				94326E072A9F600D005E4530 /* Login */,
+				94326E0B2A9F7D9F005E4530 /* Extensions */,
+				94326E072A9F600D005E4530 /* SignIn */,
 				94326E062A9F6005005E4530 /* Registration */,
 				94326DF22A9F5F92005E4530 /* AppDelegate.swift */,
 				94326DF42A9F5F92005E4530 /* SceneDelegate.swift */,
@@ -79,17 +88,36 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
-		94326E072A9F600D005E4530 /* Login */ = {
+		94326E072A9F600D005E4530 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				94326E102A9FB381005E4530 /* ViewModel */,
+				94326E0E2A9FB058005E4530 /* SignInViewController.swift */,
 			);
-			path = Login;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		94326E082A9F6D9E005E4530 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				94326E092A9F6DB7005E4530 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94326E0B2A9F7D9F005E4530 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94326E0C2A9F7DB1005E4530 /* String+Extension.swift */,
+				94326E132A9FB561005E4530 /* AlertController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94326E102A9FB381005E4530 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94326E112A9FB399005E4530 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,8 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94326DF72A9F5F92005E4530 /* RegistrationViewController.swift in Sources */,
+				94326E122A9FB399005E4530 /* SignInViewModel.swift in Sources */,
 				94326E0A2A9F6DB7005E4530 /* RegistrationViewModel.swift in Sources */,
+				94326E0F2A9FB058005E4530 /* SignInViewController.swift in Sources */,
 				94326DF32A9F5F92005E4530 /* AppDelegate.swift in Sources */,
+				94326E0D2A9F7DB1005E4530 /* String+Extension.swift in Sources */,
+				94326E142A9FB561005E4530 /* AlertController+Extension.swift in Sources */,
 				94326DF52A9F5F92005E4530 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
