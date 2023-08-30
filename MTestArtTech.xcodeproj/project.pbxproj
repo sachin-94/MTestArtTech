@@ -18,6 +18,7 @@
 		94326E0F2A9FB058005E4530 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E0E2A9FB058005E4530 /* SignInViewController.swift */; };
 		94326E122A9FB399005E4530 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E112A9FB399005E4530 /* SignInViewModel.swift */; };
 		94326E142A9FB561005E4530 /* AlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E132A9FB561005E4530 /* AlertController+Extension.swift */; };
+		94326E182A9FB944005E4530 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94326E172A9FB944005E4530 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		94326E0E2A9FB058005E4530 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		94326E112A9FB399005E4530 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		94326E132A9FB561005E4530 /* AlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Extension.swift"; sourceTree = "<group>"; };
+		94326E172A9FB944005E4530 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,8 @@
 		94326DF12A9F5F92005E4530 /* MTestArtTech */ = {
 			isa = PBXGroup;
 			children = (
+				94326E162A9FB925005E4530 /* Modules */,
 				94326E0B2A9F7D9F005E4530 /* Extensions */,
-				94326E072A9F600D005E4530 /* SignIn */,
-				94326E062A9F6005005E4530 /* Registration */,
 				94326DF22A9F5F92005E4530 /* AppDelegate.swift */,
 				94326DF42A9F5F92005E4530 /* SceneDelegate.swift */,
 				94326DF82A9F5F92005E4530 /* Main.storyboard */,
@@ -120,6 +121,24 @@
 				94326E112A9FB399005E4530 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94326E152A9FB90C005E4530 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				94326E172A9FB944005E4530 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		94326E162A9FB925005E4530 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				94326E072A9F600D005E4530 /* SignIn */,
+				94326E062A9F6005005E4530 /* Registration */,
+				94326E152A9FB90C005E4530 /* Home */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +217,7 @@
 				94326E0A2A9F6DB7005E4530 /* RegistrationViewModel.swift in Sources */,
 				94326E0F2A9FB058005E4530 /* SignInViewController.swift in Sources */,
 				94326DF32A9F5F92005E4530 /* AppDelegate.swift in Sources */,
+				94326E182A9FB944005E4530 /* HomeViewController.swift in Sources */,
 				94326E0D2A9F7DB1005E4530 /* String+Extension.swift in Sources */,
 				94326E142A9FB561005E4530 /* AlertController+Extension.swift in Sources */,
 				94326DF52A9F5F92005E4530 /* SceneDelegate.swift in Sources */,

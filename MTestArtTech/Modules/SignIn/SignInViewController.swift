@@ -21,12 +21,14 @@ class SignInViewController: UIViewController {
     var binding = Set<AnyCancellable>()
     
     var isFormValid = false
+    var isValidCredentials = false
     var viewModel = SignInViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        signinButton.layer.cornerRadius = 10
         configureTextFields()
         setupBinding()
     }
@@ -45,7 +47,10 @@ class SignInViewController: UIViewController {
         
         viewModel.isValidForm.receive(on: DispatchQueue.main).sink { [weak self] isValid in
             self?.isFormValid = isValid
-            print("Form is \(self!.isFormValid)")
+        }.store(in: &binding)
+        
+        viewModel.isValidCredentials.receive(on: DispatchQueue.main).sink { [weak self] isValid in
+            self?.isValidCredentials = isValid
         }.store(in: &binding)
     }
     
@@ -66,8 +71,31 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signinAction(_ sender: Any) {
+        
+        guard let username = usernameField.text else { return }
+        guard let password = passwordField.text else { return }
+        
+        let isAllFilled = [username,password].filter { $0.isEmpty }.isEmpty
+        if isAllFilled {
+            if isFormValid {
+                if isValidCredentials {
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                    
+                    let vc = UIStoryboard.init(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                    self.navigationController?.setViewControllers([vc], animated: true)
+                } else {
+                    self.presentAlert(withTitle: "Invalid credentials", message: "Please check your credentials and try again")
+                }
+            } else {
+                self.presentAlert(withTitle: "Attention", message: "Please enter valid information in the fields")
+            }
+        } else {
+            self.presentAlert(withTitle: "Attention", message: "Please fill all the fields")
+        }
     }
     @IBAction func registerAction(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+        self.navigationController?.setViewControllers([vc], animated: true)
     }
     
 }

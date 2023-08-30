@@ -42,6 +42,7 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        registerButton.layer.cornerRadius = 10
         configureTextFields()
         setupBinding()
     }
@@ -150,15 +151,25 @@ class RegistrationViewController: UIViewController {
         let isAllFilled = [firstName,lastName,gender,mobileNumber,email,username,password,confirmPassword].filter { $0.isEmpty }.isEmpty
         if isAllFilled {
             if isFormValid {
-                print("Form is valid")
+                UserDefaults.standard.set(username, forKey: "username")
+                UserDefaults.standard.set(password, forKey: "password")
+                
+                // Action for UIAlert
+                let action  = UIAlertAction(title: "Done", style: .default) { (action:UIAlertAction!) in
+                    self.signInAction("")
+                }
+                
+                self.presentAlertWithAction(WithTitle: "Success", message: "Registration success", actions: [action])
             } else {
-                print("Form is invalid")
+                self.presentAlert(withTitle: "Attention", message: "Please enter valid information in the fields")
             }
         } else {
-            print("Form is invalid")
+            self.presentAlert(withTitle: "Attention", message: "Please fill all the fields")
         }
     }
     @IBAction func signInAction(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        self.navigationController?.setViewControllers([vc], animated: true)
     }
     
 }
