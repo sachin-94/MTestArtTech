@@ -21,13 +21,13 @@ extension String {
     
     func isValidName() -> Bool {
         // First name containing only letters, spaces, hyphens, and apostrophes
-        let regEx = "^[a-zA-Z'\\- ]+$"
+        let regEx = "^(?![ -])[a-zA-Z'\\- ]+$" //"^[a-zA-Z'\\- ]+$"
         let predicate = NSPredicate(format:"SELF MATCHES %@", regEx)
         return predicate.evaluate(with: self)
     }
     
     func isValidGender() -> Bool {
-        let regEx = "^(male|female|others)$"
+        let regEx = "^(Male|Female|Others)$"
         let predicate = NSPredicate(format:"SELF MATCHES %@", regEx)
         return predicate.evaluate(with: self)
     }

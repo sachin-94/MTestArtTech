@@ -9,6 +9,7 @@ import UIKit
 import Combine
 
 class RegistrationViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var genderField: UITextField!
@@ -30,9 +31,20 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
-    var isFormValid = false
+    @IBOutlet weak var nameInstructions: UILabel!
     
-    var activeFieldTag = 0
+    @IBOutlet weak var confirmPasswordInstructions: UILabel!
+    @IBOutlet weak var passwordInstructions: UILabel!
+    @IBOutlet weak var userNameInstructions: UILabel!
+    @IBOutlet weak var emailInstructions: UILabel!
+    @IBOutlet weak var mobileInstructions: UILabel!
+    @IBOutlet weak var lastNameInstructions: UILabel!
+    
+    @IBOutlet weak var genderInstructions: UILabel!
+    @IBOutlet weak var passwordVisibility: UIButton!
+    @IBOutlet weak var confirmPasswordVisibility: UIButton!
+    var isFormValid = false
+    var previousInstructionLabel: UILabel!
     
     private var binding = Set<AnyCancellable>()
     
@@ -42,6 +54,7 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        previousInstructionLabel = nameInstructions
         registerButton.layer.cornerRadius = 10
         configureTextFields()
         setupBinding()
@@ -80,20 +93,14 @@ class RegistrationViewController: UIViewController {
         // Passwords validation event observer
         viewModel.isValidPassword.receive(on: DispatchQueue.main).sink { [weak self] isValid in
             self?.passwordValidationLbl.isHidden = isValid
+            if !(self?.passwordField.text?.isEmpty ?? true) {
+                self?.confirmPasswordField.isUserInteractionEnabled = isValid
+            }
         }.store(in: &binding)
         
         viewModel.isValidConfirmPassword.receive(on: DispatchQueue.main).sink { [weak self] isValid in
             self?.confirmPasswordValidationLbl.isHidden = isValid
         }.store(in: &binding)
-        
-        // Validation for passwords matching
-//        viewModel.isPasswordsMatch.receive(on: DispatchQueue.main).sink { [weak self] isValid in
-//            if self?.activeFieldTag == self?.passwordField.tag {
-//                self?.passwordValidationLbl.isHidden = isValid
-//            } else if self?.activeFieldTag == self?.confirmPasswordField.tag {
-//                self?.confirmPasswordValidationLbl.isHidden = isValid
-//            }
-//        }.store(in: &binding)
         
         viewModel.isValidForm.receive(on: DispatchQueue.main).sink { [weak self] isValid in
             self?.isFormValid = isValid
@@ -103,6 +110,15 @@ class RegistrationViewController: UIViewController {
     
     func configureTextFields() {
         
+        firstNameField.delegate = self
+        lastNameField.delegate = self
+        genderField.delegate = self
+        mobileField.delegate = self
+        emailField.delegate = self
+        usernameField.delegate = self
+        passwordField.delegate = self
+        confirmPasswordField.delegate = self
+            
         firstNameField.addTarget(self, action: #selector(textFieldTextChanged(_ :)), for: .editingChanged)
         lastNameField.addTarget(self, action: #selector(textFieldTextChanged(_ :)), for: .editingChanged)
         genderField.addTarget(self, action: #selector(textFieldTextChanged(_ :)), for: .editingChanged)
@@ -128,10 +144,8 @@ class RegistrationViewController: UIViewController {
         case 5:
             viewModel.username = textField.text ?? ""
         case 6:
-            activeFieldTag = textField.tag
             viewModel.passsword = textField.text ?? ""
         case 7:
-            activeFieldTag = textField.tag
             viewModel.confirmPassword = textField.text ?? ""
         default:
             return
@@ -172,5 +186,94 @@ class RegistrationViewController: UIViewController {
         self.navigationController?.setViewControllers([vc], animated: true)
     }
     
+    func scrollToBottom() {
+        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+        scrollView.setContentOffset(bottomOffset, animated: true)
+    }
+    @IBAction func visibilityAction(_ sender: UIButton) {
+        if sender.tag == 0 {
+            if sender.image(for: .normal) == UIImage(named: "closed-eye") {
+                sender.setImage(UIImage(named: "eye"), for: .normal)
+                passwordField.isSecureTextEntry = true
+            } else {
+                sender.setImage(UIImage(named: "closed-eye"), for: .normal)
+                passwordField.isSecureTextEntry = false
+            }
+        } else {
+            if sender.image(for: .normal) == UIImage(named: "closed-eye") {
+                sender.setImage(UIImage(named: "eye"), for: .normal)
+                confirmPasswordField.isSecureTextEntry = true
+            } else {
+                sender.setImage(UIImage(named: "closed-eye"), for: .normal)
+                confirmPasswordField.isSecureTextEntry = false
+            }
+        }
+    }
+    
 }
 
+extension RegistrationViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        previousInstructionLabel.isHidden = true
+        switch textField.tag {
+        case 0:
+            previousInstructionLabel = nameInstructions
+            nameInstructions.isHidden = false
+        case 1:
+            previousInstructionLabel = lastNameInstructions
+            lastNameInstructions.isHidden = false
+        case 2:
+            previousInstructionLabel = genderInstructions
+            genderInstructions.isHidden = false
+        case 3:
+            previousInstructionLabel = mobileInstructions
+            mobileInstructions.isHidden = false
+        case 4:
+            previousInstructionLabel = emailInstructions
+            emailInstructions.isHidden = false
+            scrollToBottom()
+        case 5:
+            previousInstructionLabel = userNameInstructions
+            userNameInstructions.isHidden = false
+        case 6:
+            previousInstructionLabel = passwordInstructions
+            passwordInstructions.isHidden = false
+            scrollToBottom()
+        case 7:
+            previousInstructionLabel = confirmPasswordInstructions
+            confirmPasswordInstructions.isHidden = false
+            scrollToBottom()
+        default:
+            return
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField.tag {
+        case 0:
+            lastNameField.becomeFirstResponder()
+        case 1:
+            genderField.becomeFirstResponder()
+        case 2:
+            mobileField.becomeFirstResponder()
+        case 3:
+            emailField.becomeFirstResponder()
+        case 4:
+            usernameField.becomeFirstResponder()
+        case 5:
+            passwordField.becomeFirstResponder()
+        case 6:
+            if confirmPasswordField.isUserInteractionEnabled {
+                confirmPasswordField.becomeFirstResponder()
+            } else {
+                textField.resignFirstResponder()
+            }
+        case 7:
+            textField.resignFirstResponder()
+        default:
+            break
+        }
+        return true
+    }
+    
+}

@@ -23,11 +23,17 @@ class SignInViewController: UIViewController {
     var isFormValid = false
     var isValidCredentials = false
     var viewModel = SignInViewModel()
+    @IBOutlet weak var passwordInstructions: UILabel!
+    @IBOutlet weak var usernameInstructions: UILabel!
+    
+    var previousInstructionLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        previousInstructionLabel = usernameInstructions
         signinButton.layer.cornerRadius = 10
         configureTextFields()
         setupBinding()
@@ -55,6 +61,9 @@ class SignInViewController: UIViewController {
     }
     
     func configureTextFields() {
+        usernameField.delegate = self
+        passwordField.delegate = self
+        
         usernameField.addTarget(self, action: #selector(textFieldTextChanged(_ :)), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(textFieldTextChanged(_ :)), for: .editingChanged)
     }
@@ -97,5 +106,44 @@ class SignInViewController: UIViewController {
         let vc = UIStoryboard.init(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
         self.navigationController?.setViewControllers([vc], animated: true)
     }
+    @IBAction func visibilityAction(_ sender: UIButton) {
+        if sender.image(for: .normal) == UIImage(named: "closed-eye") {
+            sender.setImage(UIImage(named: "eye"), for: .normal)
+            passwordField.isSecureTextEntry = true
+        } else {
+            sender.setImage(UIImage(named: "closed-eye"), for: .normal)
+            passwordField.isSecureTextEntry = false
+        }
+    }
     
 }
+
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        previousInstructionLabel.isHidden = true
+        switch textField.tag {
+        case 0:
+            previousInstructionLabel = usernameInstructions
+            usernameInstructions.isHidden = false
+        case 1:
+            previousInstructionLabel = passwordInstructions
+            passwordInstructions.isHidden = false
+        default:
+            return
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField.tag {
+        case 0:
+            passwordField.becomeFirstResponder()
+        case 1:
+            textField.resignFirstResponder()
+        default:
+            break
+        }
+        return true
+    }
+    
+}
+

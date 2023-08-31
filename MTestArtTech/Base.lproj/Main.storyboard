@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-WS-DXd">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="771"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="781"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2t-m6-eTG">
                                                 <rect key="frame" x="150" y="16" width="130" height="36"/>
@@ -45,10 +45,18 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name cannot contain special characters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-JS-nb3">
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-JS-nb3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtF-iY-8cB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <string key="text">Name must start with a letter
+Can have only letters, spaces, and hyphens</string>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -64,10 +72,18 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name cannot contain special characters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-1w-2yh">
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-1w-2yh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCu-rs-r5A">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <string key="text">Name must start with a letter
+Can have only letters, spaces, and hyphens</string>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -85,8 +101,16 @@
                                                             </textField>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid gender specified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-Rw-LQx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Faz-zX-OeZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <string key="text">First letter must be capital
+Supports: Male, Female and Others</string>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -100,12 +124,20 @@
                                                                     <constraint firstAttribute="height" constant="45" id="ASd-nM-uYs"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                                             </textField>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid number format" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcg-an-9us">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymh-As-k1y">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <string key="text">Must be digits
+Supports only 10-digit format without spaces, dashes, or country codes</string>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -119,12 +151,18 @@
                                                                     <constraint firstAttribute="height" constant="45" id="3F6-JT-Fg7"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                                             </textField>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid email id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lht-x7-Iie">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: user@domain.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="304-fL-OWV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -138,12 +176,18 @@
                                                                     <constraint firstAttribute="height" constant="45" id="k0E-pc-oES"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                                             </textField>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yo-3z-FYt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username supports only letters, numbers, underscores, hyphens, and periods" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0i-Tf-n41">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -151,18 +195,48 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1T1-pQ-XGi">
                                                         <rect key="frame" x="0.0" y="390" width="398" height="45"/>
                                                         <subviews>
-                                                            <textField opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3t-EI-gua">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ged-yL-rgj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="45"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="Dd4-4H-ujT"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must contain atleast 8 characters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkk-Tr-7JA">
+                                                                <subviews>
+                                                                    <textField opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3t-EI-gua">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="45"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="Dd4-4H-ujT"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                    </textField>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sud-uN-m7H">
+                                                                        <rect key="frame" x="358" y="0.0" width="40" height="45"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="40" id="VzQ-R7-faS"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="eye">
+                                                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="visibilityAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WmJ-4w-eVV"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkk-Tr-7JA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrI-HS-VOR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <string key="text">Password conditions:
+At least 8 characters
+Containing at least one uppercase letter
+One lowercase letter
+One digit
+One special character</string>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -170,18 +244,42 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wQy-l3-G0E">
                                                         <rect key="frame" x="0.0" y="455" width="398" height="45"/>
                                                         <subviews>
-                                                            <textField opaque="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-kE-JfH">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wki-oh-5pQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="45"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="cpl-pd-WuS"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
+                                                                <subviews>
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-kE-JfH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="45"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="cpl-pd-WuS"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                    </textField>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-Gf-fOF">
+                                                                        <rect key="frame" x="358" y="0.0" width="40" height="45"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="40" id="dtQ-gd-bKd"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="eye">
+                                                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="visibilityAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4i3-FE-YGP"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passwords doesn't match" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh9-vF-gp2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Must match above password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-JQ-hIQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -228,7 +326,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="GEv-UU-wNe" secondAttribute="bottom" constant="40" id="F1z-RB-2bW"/>
+                                            <constraint firstAttribute="bottom" secondItem="GEv-UU-wNe" secondAttribute="bottom" constant="50" id="F1z-RB-2bW"/>
                                             <constraint firstItem="geV-5k-s4p" firstAttribute="top" secondItem="q2t-m6-eTG" secondAttribute="bottom" constant="16" id="ITY-ie-2OS"/>
                                             <constraint firstItem="geV-5k-s4p" firstAttribute="leading" secondItem="Mqq-WS-DXd" secondAttribute="leading" constant="16" id="JzG-7s-bFP"/>
                                             <constraint firstAttribute="trailing" secondItem="TZg-kL-e7y" secondAttribute="trailing" constant="16" id="chQ-aR-OnP"/>
@@ -266,21 +364,32 @@
                     <navigationItem key="navigationItem" id="JGk-zT-4AA"/>
                     <connections>
                         <outlet property="confirmPasswordField" destination="iXY-kE-JfH" id="sW7-uh-0In"/>
+                        <outlet property="confirmPasswordInstructions" destination="Xzf-JQ-hIQ" id="3a9-as-3ir"/>
                         <outlet property="confirmPasswordValidationLbl" destination="sh9-vF-gp2" id="94E-GY-AL9"/>
+                        <outlet property="confirmPasswordVisibility" destination="6Lj-Gf-fOF" id="C67-9h-lKS"/>
                         <outlet property="emailField" destination="6y5-ap-5QU" id="nxh-SY-cbn"/>
+                        <outlet property="emailInstructions" destination="304-fL-OWV" id="EYd-FT-fmD"/>
                         <outlet property="emailValidationLbl" destination="Lht-x7-Iie" id="vGC-Wv-obb"/>
                         <outlet property="firstNameField" destination="9M8-Z7-Wsb" id="fwM-ml-g3O"/>
                         <outlet property="firstNameValidationLbl" destination="qsh-JS-nb3" id="x7K-Ck-fGT"/>
                         <outlet property="genderField" destination="d73-G4-2G4" id="Jf2-89-ffe"/>
+                        <outlet property="genderInstructions" destination="Faz-zX-OeZ" id="dYb-a9-eUt"/>
                         <outlet property="genderValidationLbl" destination="Dxe-Rw-LQx" id="IId-CY-zUT"/>
                         <outlet property="lastNameField" destination="4M0-s4-qew" id="EVT-0Q-2gK"/>
+                        <outlet property="lastNameInstructions" destination="iCu-rs-r5A" id="y7P-M1-bNC"/>
                         <outlet property="lastNameValidationLbl" destination="2Kh-1w-2yh" id="E7r-AL-W29"/>
                         <outlet property="mobileField" destination="RON-9v-MoP" id="kSd-jZ-HYn"/>
+                        <outlet property="mobileInstructions" destination="ymh-As-k1y" id="sE0-YQ-Qa2"/>
                         <outlet property="mobileNoValidationLbl" destination="Xcg-an-9us" id="tfk-id-IK7"/>
+                        <outlet property="nameInstructions" destination="HtF-iY-8cB" id="AUz-bP-oll"/>
                         <outlet property="passwordField" destination="B3t-EI-gua" id="rYu-ev-oTT"/>
+                        <outlet property="passwordInstructions" destination="rrI-HS-VOR" id="mov-ac-yAs"/>
                         <outlet property="passwordValidationLbl" destination="dkk-Tr-7JA" id="xfc-GJ-Io5"/>
+                        <outlet property="passwordVisibility" destination="sud-uN-m7H" id="bih-Cf-7N2"/>
                         <outlet property="registerButton" destination="TZg-kL-e7y" id="WJc-sG-u4p"/>
+                        <outlet property="scrollView" destination="pRU-4Y-yuc" id="NSY-m7-bEr"/>
                         <outlet property="signInButton" destination="dmg-bB-gOZ" id="gnQ-RF-dfA"/>
+                        <outlet property="userNameInstructions" destination="c0i-Tf-n41" id="RBm-2Z-8ss"/>
                         <outlet property="usernameField" destination="Zuw-S0-s2u" id="lNZ-wT-zcY"/>
                         <outlet property="usernameValidationLbl" destination="4yo-3z-FYt" id="nrQ-ui-R92"/>
                     </connections>
@@ -318,12 +427,18 @@
                                                     <constraint firstAttribute="height" constant="45" id="Mwe-uT-YwT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQU-Ps-bG0">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username supports only letters, numbers, underscores, hyphens, and periods" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCW-Lq-g1G">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -331,18 +446,48 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-1a-ys0">
                                         <rect key="frame" x="0.0" y="65" width="398" height="45"/>
                                         <subviews>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPA-rS-hPk">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-Z9-wkW">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="nYL-gF-gOt"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPA-rS-hPk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="nYL-gF-gOt"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogr-Z2-6Pe">
+                                                        <rect key="frame" x="358" y="0.0" width="40" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="wds-wv-18I"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="eye">
+                                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="visibilityAction:" destination="HuV-jI-2Nk" eventType="touchUpInside" id="vPl-TH-JsR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWG-oo-3t2">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWy-Td-Vhr">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                <string key="text">Password conditions:
+At least 8 characters
+Containing at least one uppercase letter
+One lowercase letter
+One digit
+One special character</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -404,9 +549,11 @@
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="bPA-rS-hPk" id="dTD-xZ-pzh"/>
+                        <outlet property="passwordInstructions" destination="BWy-Td-Vhr" id="3ZI-71-Nlv"/>
                         <outlet property="passwordValidationLbl" destination="OWG-oo-3t2" id="PQ9-lU-Vwv"/>
                         <outlet property="signinButton" destination="2e7-qw-nMs" id="uAF-Nn-BRp"/>
                         <outlet property="usernameField" destination="Sec-S4-Ua0" id="kGr-Z0-W2D"/>
+                        <outlet property="usernameInstructions" destination="nCW-Lq-g1G" id="R1a-6W-2wf"/>
                         <outlet property="usernameValidationLbl" destination="pQU-Ps-bG0" id="NQ6-FJ-3F7"/>
                     </connections>
                 </viewController>
@@ -432,7 +579,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nh-AX-Fmt">
-                                <rect key="frame" x="16" y="856" width="398" height="50"/>
+                                <rect key="frame" x="16" y="824" width="398" height="50"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DSh-h1-T8L"/>
@@ -450,8 +597,8 @@
                         <viewLayoutGuide key="safeArea" id="Wuf-Xr-rmr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Wuf-Xr-rmr" firstAttribute="bottom" secondItem="0nh-AX-Fmt" secondAttribute="bottom" constant="24" id="DPD-8P-mUc"/>
                             <constraint firstItem="Wuf-Xr-rmr" firstAttribute="trailing" secondItem="0nh-AX-Fmt" secondAttribute="trailing" constant="16" id="IA9-Hx-XRM"/>
-                            <constraint firstItem="0nh-AX-Fmt" firstAttribute="bottom" secondItem="Wuf-Xr-rmr" secondAttribute="bottom" constant="8" id="IFd-2C-EPd"/>
                             <constraint firstItem="MrJ-yO-ntL" firstAttribute="centerY" secondItem="Wuf-Xr-rmr" secondAttribute="centerY" id="LNB-qG-Gle"/>
                             <constraint firstItem="0nh-AX-Fmt" firstAttribute="leading" secondItem="Wuf-Xr-rmr" secondAttribute="leading" constant="16" id="ga0-vU-2iU"/>
                             <constraint firstItem="MrJ-yO-ntL" firstAttribute="centerX" secondItem="Wuf-Xr-rmr" secondAttribute="centerX" id="lka-fA-d14"/>
@@ -463,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgM-O8-1Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="-12"/>
+            <point key="canvasLocation" x="2137.6744186046512" y="-12.231759656652361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JCg-jl-gTA">
@@ -484,8 +631,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eye" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

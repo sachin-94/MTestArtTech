@@ -25,8 +25,10 @@ class RegistrationViewModel {
     lazy var isValidMobileNumber = $mobileNumber.map { $0.isEmpty || $0.isValidMobileNumber() }
     lazy var isValidUsername = $username.map { $0.isEmpty || $0.isValidUsername() }
     lazy var isValidPassword = $passsword.map { $0.isEmpty || $0.isValidPassword() }
-    lazy var isValidConfirmPassword = $confirmPassword.map { $0.isEmpty || $0.isValidPassword() }
+    lazy var isValidConfirmPassword = $confirmPassword.map { [weak self] in $0.isEmpty || $0 == self?.passsword }
     lazy var isPasswordsMatch = Publishers.CombineLatest($passsword, $confirmPassword).map { $0 == $1 }.eraseToAnyPublisher()
     lazy var isValidEmail = $email.map { $0.isEmpty || $0.isValidEmail() }
+    
+    // Checks if all the fields are valid and updates everytime a field value changes. If any field becomes invalid, the condition fails and returns false
     lazy var isValidForm = Publishers.MergeMany([isValidFirstName,isValidLastName,isValidGender,isValidMobileNumber,isValidUsername,isValidPassword,isValidConfirmPassword,isValidEmail]).map { $0 == true }
 }
